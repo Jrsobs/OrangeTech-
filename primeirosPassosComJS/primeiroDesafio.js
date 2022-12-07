@@ -10,10 +10,10 @@ Você terá 3 variáveis. Sendo elas:
 console.log("Olá")
 
 const valorCombustivel = 5.79
-const gastoMedioPorKM = 12
+const kmPorLitro = 12
 const distanciaEmKM = 1580
 
-const litrosConsumidos = distanciaEmKM / gastoMedioPorKM
+const litrosConsumidos = distanciaEmKM / kmPorLitro
 const valorGasto = litrosConsumidos * valorCombustivel
 
 console.log('Você Gastou R$ '+valorGasto.toFixed(2))
