@@ -38,24 +38,24 @@ console.log('')
     - Acima de 40 Obsesidade Grave;
 */
 
-let peso = 80
-let altura = 1.80;
-const IMC = peso / (altura*altura);
+const peso = 80
+const altura = 1.80;
+const imc = peso / Math.pow(altura, 2);
 
 console.log('');
 console.log('Análise de IMC');
 console.log('');
 console.log('Seu peso é '+peso+' kilos e a sua altura é '+altura*100+' centímetros');
-console.log('Seu índice de massa corpórea (IMC) é de '+IMC);
+console.log('Seu índice de massa corpórea (IMC) é de '+imc.toFixed(1));
 console.log('Seu estado corporal é:');
 
-if (IMC < 18.5) {
+if (imc < 18.5) {
   console.log('Abaixo do peso')
-} else if (IMC >= 18.5 && IMC < 25) {
+} else if (imc >= 18.5 && imc < 25) {
   console.log('Peso normal')
-} else if (IMC >= 25 && IMC < 30) {
+} else if (imc >= 25 && imc < 30) {
   console.log('Acima do peso')
-} else if (IMC >= 30 && IMC <= 40) {
+} else if (imc >= 30 && imc < 40) {
   console.log('Obeso')
 } else {
   console.log('Obesidade Grave')
@@ -72,13 +72,19 @@ console.log('');
     - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
 */
 
-const precoPadrao = 10;
+const precoPadrao = 543;
 const debitoDesconto = 0.9;
 const dinheiroOuPixDesconto = 0.85;
 const acrescimoAcimaDe2X = 1.1;
+const a = 'Débito'
+const b = 'Dinheiro'
+const c = 'Pix'
+const d = 'Crédito até 2x'
+const e = 'Crédito acima de 2x'
+
 
 //formaDePagamento='Debito';'Dinheiro';'Pix';'Crédito até 2x';'Crédito >2x'
-const formaDePagamento = 'Crédito >2x';
+const formaDePagamento = e;
 
 console.log ('');
 console.log ('Forma de Pagamento e Valor a Pagar');
@@ -87,24 +93,24 @@ console.log ('Valor do Produto = R$ '+precoPadrao);
 console.log ('Forma de Pagamento: '+formaDePagamento);
 console.log ('');
 
-if (formaDePagamento === 'Debito') {
+if (formaDePagamento === a) {
   const precoAPagar = precoPadrao * debitoDesconto
   console.log('Você ganhou 10% de desconto!')
-  console.log('Total a pagar: R$ '+precoAPagar)
-} else if (formaDePagamento === 'Dinheiro') {
+  console.log('Total a pagar: R$ '+precoAPagar.toFixed(2))
+} else if (formaDePagamento === b) {
   const precoAPagar = precoPadrao * dinheiroOuPixDesconto
   console.log('Você ganhou 15% de desconto!')
-  console.log('Total a pagar: R$ '+precoAPagar)
-} else if (formaDePagamento === 'Pix') {
+  console.log('Total a pagar: R$ '+precoAPagar.toFixed(2))
+} else if (formaDePagamento === c) {
   const precoAPagar = precoPadrao * dinheiroOuPixDesconto
   console.log('Você ganhou 15% de desconto!')
-  console.log('Total a pagar: R$ '+precoAPagar)
-} else if (formaDePagamento === 'Crédito até 2x') {
+  console.log('Total a pagar: R$ '+precoAPagar.toFixed(2))
+} else if (formaDePagamento === d) {
   console.log('Parcele em até 2x sem juros!')
-  console.log('Total a pagar: R$ '+precoPadrao)
-} else if (formaDePagamento === 'Crédito >2x') {
+  console.log('Total a pagar: R$ '+precoPadrao.toFixed(2))
+} else if (formaDePagamento === e) {
   const precoAPagar = precoPadrao * acrescimoAcimaDe2X
   console.log('Compra com acréscimo')
-  console.log('Total a pagar: R$ '+precoAPagar)
+  console.log('Total a pagar: R$ '+precoAPagar.toFixed(2))
 }
 console.log ('')

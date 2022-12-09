@@ -16,4 +16,4 @@ const distanciaEmKM = 1580
 const litrosConsumidos = distanciaEmKM / kmPorLitro
 const valorGasto = litrosConsumidos * valorCombustivel
 
-console.log('Você Gastou R$ '+valorGasto.toFixed(2))
+console.log('Você Gastou R$ ' + valorGasto.toFixed(2))
